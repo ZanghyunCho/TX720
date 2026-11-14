@@ -14,7 +14,16 @@ v2에서 패널 헤드 청소가 즉시 완료되는 사용자 보고에 대한 
 압축 해제 후 명령어 한 곳만 바뀌며, 일반 청소의 모드 선택·실행 요청 경로 비교 검증을 통과했습니다.
 **실제 청소 동작은 아직 확인되지 않았습니다.**
 
-CR 모터 발열 감속 제어는 [별도로 분석 중](docs/cr-heat-investigation.md)이며, 이를 비활성화한 파일은 아직 없습니다.
+### 미국판 v4 — CR 보호 대기 우회 실험
+
+[미국판 v4 다운로드](https://raw.githubusercontent.com/ZanghyunCho/TX720/main/firmware/FWC365TL_US_v4_CR_wait_bypass_EXPERIMENTAL.efu) · [변경·위험·검증 범위](docs/us-cr-wait-v4.md)
+
+v3를 바탕으로 CR 모터 보호 계산에서 인쇄 전 추가 대기에 쓰이는 값만 0으로 반환합니다.
+PF 모터 대기 계산과 기존 스캐너·무칩·100%·패널 청소 수정은 유지합니다.
+**열 보호 대기를 우회하므로 CR 모터·드라이버 과열 및 손상 위험이 있습니다.**
+180개 명령어 에뮬레이션 사례와 원본 압축 해제기 검증을 통과했지만,
+실제 감속 해소와 온도 안전성은 검증하지 않았습니다. 모든 감속 원인을 해제한 파일은 아닙니다.
+추적 근거는 [CR 조사 기록](docs/cr-heat-investigation.md)에 있습니다.
 
 [미국판 v2 다운로드](https://raw.githubusercontent.com/ZanghyunCho/TX720/main/firmware/FWC365TL_US_chipless_candidate_v2_EXPERIMENTAL.efu) · [변경 및 검증 범위](docs/us-chipless-candidate-v2.md)
 

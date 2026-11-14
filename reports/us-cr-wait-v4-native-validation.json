@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "revision": 4,
+  "package_sha256": "eace524e8e4850c97ea31681b2dc7175ce60935f0a890393e888bef3c4ac17db",
+  "native_decoder_segments": [
+    {
+      "destination": "0x41a0d000",
+      "length": 2436364,
+      "sha256": "9af18785b5c0486e6cc660ed00fc489087883107b1219478f1bf6dec7d4ac8da",
+      "cursor": 1287761
+    },
+    {
+      "destination": "0x40000000",
+      "length": 767300,
+      "sha256": "a197574e8968d269c0d8aa1eb3bd0c962f2e9d70106bd013f7e6e9128bcd7ae6",
+      "cursor": 1569983
+    },
+    {
+      "destination": "0x43e51000",
+      "length": 2972,
+      "sha256": "a2042e7cee0c55e984fe003f16cddf0296971878d263e7e40ca4d31eade8a1e5",
+      "cursor": 1572144
+    }
+  ],
+  "decoded_changes_relative_to_v3": [
+    "0x400aaa78",
+    "0x400aaa79",
+    "0x400aaa7a",
+    "0x400aaa7b"
+  ],
+  "first_ipl_and_metadata_equal_to_v3": true,
+  "v3_panel_cleaning_correction_preserved": true,
+  "other_decoded_segments_equal_to_v3": true,
+  "pf_query_and_coefficients_unchanged": true,
+  "device_tested": false,
+  "thermal_safety_verified": false,
+  "scope": "Original ARM CROM decoder executes without mocks. All decoded bytes match US v3 except four bytes at the Xtensa CR delay query. This verifies container/decoder integrity, not physical cooling or motor temperature."
+}

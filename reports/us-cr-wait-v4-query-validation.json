@@ -1,0 +1,1 @@
+{"status":"passed","query_cases":180,"cr_only_returns_zero":true,"pf_model_preserved":true,"stack_and_saved_registers_preserved":true,"method":"Ghidra Xtensa p-code emulation with fixed core-2 extended L32R pool","physical_device_tested":false}

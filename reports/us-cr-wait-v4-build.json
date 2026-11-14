@@ -1,0 +1,22 @@
+{
+  "revision": 4,
+  "status": "EXPERIMENTAL_CR_WAIT_BYPASS",
+  "variant": "US",
+  "source_v3_sha256": "e9937d5c82d38a09ac063a468a6d580d65d60f46170a16eeb5feab0df8238acc",
+  "output_efu_sha256": "eace524e8e4850c97ea31681b2dc7175ce60935f0a890393e888bef3c4ac17db",
+  "first_ipl_unchanged_from_v3": true,
+  "metadata_unchanged": true,
+  "modified_part2_sha256": "f541062146c3b9514bf7cd3f222353ab2b51fcb69de3cd6207322658d461c9fd",
+  "compressed_stream_growth": 52,
+  "decoded_change": {
+    "address": "0x400aaa78",
+    "before": "213c0031",
+    "after": "0c020df0",
+    "meaning": "Xtensa CR delay query: movi.n a2,0; ret.n. PF delay query remains original."
+  },
+  "existing_v3_patches_retained": true,
+  "device_tested": false,
+  "physical_speed_improvement_verified": false,
+  "thermal_safety_verified": false,
+  "warning": "Bypasses one CR motor heat-protection delay. Overheating and motor/driver damage are possible. No motor-temperature measurement or hardware validation was performed."
+}
