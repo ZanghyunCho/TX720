@@ -1,7 +1,8 @@
 # 미국판 무칩·100% 후보 v2 — 상태 전달 경로 추가
 
-**실제 기기의 부팅·무칩 인쇄·복구는 아직 검증하지 않은 실험 후보입니다.**
-v1은 사용자 기기에서 실패했습니다. v2의 ARM 검증 통과가 실기 성공을 보장하지 않습니다.
+사용자가 v2 적용 후 작동한다고 보고했습니다. 실제 인쇄·복구 성공 여부는 아직 확인되지 않았습니다.
+이후 패널 청소가 즉시 완료되는 현상이 보고돼 [후속 후보 v3](us-chipless-candidate-v3.md)를 만들었습니다.
+v1은 사용자 기기에서 실패했습니다. v2의 ARM 검증 통과가 전체 실기 동작을 보장하지 않습니다.
 
 [v2 EFU 다운로드](https://raw.githubusercontent.com/ZanghyunCho/TX720/main/firmware/FWC365TL_US_chipless_candidate_v2_EXPERIMENTAL.efu)
 

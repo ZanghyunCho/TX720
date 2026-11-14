@@ -1,0 +1,22 @@
+{
+  "revision": 3,
+  "status": "EXPERIMENTAL_CANDIDATE",
+  "variant": "US",
+  "source_v2_sha256": "1eb06886cea92cae6ee4249fe258c1195ab1874b6e3740176e3288e9a8c81355",
+  "output_efu_sha256": "e9937d5c82d38a09ac063a468a6d580d65d60f46170a16eeb5feab0df8238acc",
+  "part1_sha256": "484a2ebc6f8ed28b4f17353d3247eb90bbf67170cddfac58977018043a227daf",
+  "modified_part2_sha256": "eb8327a1bab8b42d9c10069c230051ca56c1a09fb1bf6599b52412075e4b5b3a",
+  "part1_unchanged_from_v2": true,
+  "metadata_unchanged": true,
+  "compressed_stream_growth": 241,
+  "compressed_blocks_replaced": 2,
+  "decoded_change": {
+    "address": "0x41a4573c",
+    "before": "c2c1ffeb",
+    "after": "0000a0e3",
+    "meaning": "Replace normal-cleaning caller dummy check with mov r0,#0; retain global dummy recognition elsewhere."
+  },
+  "device_tested": false,
+  "physical_cleaning_verified": false,
+  "note": "Native decoder output and dispatch comparison must be verified separately; no device access."
+}

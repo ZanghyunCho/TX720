@@ -8,10 +8,17 @@
 
 ## 미국판 무칩·100% 후속 실험 후보
 
+[미국판 v3 다운로드 — 일반 청소 건너뛰기 분기 수정](https://raw.githubusercontent.com/ZanghyunCho/TX720/main/firmware/FWC365TL_US_chipless_candidate_v3_EXPERIMENTAL.efu) · [변경 및 검증 범위](docs/us-chipless-candidate-v3.md)
+
+v2에서 패널 헤드 청소가 즉시 완료되는 사용자 보고에 대한 후속 후보입니다.
+압축 해제 후 명령어 한 곳만 바뀌며, 일반 청소의 모드 선택·실행 요청 경로 비교 검증을 통과했습니다.
+**실제 청소 동작은 아직 확인되지 않았습니다.**
+
 [미국판 v2 다운로드](https://raw.githubusercontent.com/ZanghyunCho/TX720/main/firmware/FWC365TL_US_chipless_candidate_v2_EXPERIMENTAL.efu) · [변경 및 검증 범위](docs/us-chipless-candidate-v2.md)
 
 v1에서 남았던 장착·잉크 종료 상태 전달 경로를 추가로 수정한 후보입니다.
-원본 상태 판정 코드의 수정 전/후 오류 비교는 통과했지만 **실제 부팅·인쇄는 아직 미검증**입니다.
+원본 상태 판정 코드의 수정 전/후 오류 비교를 통과했으며, 사용자가 적용 후 작동한다고 보고했습니다.
+인쇄 성공 여부는 아직 확인되지 않았고, 패널 청소가 즉시 완료되는 현상이 보고됐습니다.
 스캐너 닫힘 패치를 포함합니다. 빈 카트리지 상태로 인쇄·헤드 청소를 하지 마세요.
 
 ## 스캐너 닫힘 전용 다운로드

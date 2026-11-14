@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify both committed experimental EFUs offline; does not access a printer."""
+"""Verify committed experimental EFUs offline; does not access a printer."""
 import hashlib
 import json
 from pathlib import Path
@@ -8,6 +8,7 @@ import zipfile
 from patch_scanner_closed import AFTER, PROFILES, inspect_container
 from patch_us_chipless_candidate import (READ_OFFSET, READER, STATUS_API,
     FILTER_ADDRESS, STATUS_FILTER, LEVEL_GETTER, FULL_LEVEL, arm_branch)
+from patch_us_cleaning_v3 import repack, PLAN_PATH
 import struct
 
 
@@ -87,6 +88,24 @@ def main():
     if validation['status']!='passed' or validation['normalized_api_cases']!=4096 or validation['gui_level_getter_cases']!=1536 or len(validation['native_error_decision_cases'])!=30 or reader['status']!='passed':
         raise ValueError('Missing v2 native validation')
     print(f'{filename}: integrity, exact edits, status API and native error comparisons OK; device UNTESTED')
+    filename='FWC365TL_US_chipless_candidate_v3_EXPERIMENTAL.efu'
+    file=root/'firmware'/filename
+    report=json.loads((root/'reports/us-chipless-candidate-v3-patch.json').read_text())
+    validation=json.loads((root/'reports/us-chipless-candidate-v3-validation.json').read_text())
+    package_hash=hashlib.sha256(file.read_bytes()).hexdigest()
+    if package_hash!=report['output_efu_sha256'] or package_hash!=validation['package_sha256']:
+        raise ValueError('US v3 package/report hash mismatch')
+    with zipfile.ZipFile(file) as z:
+        if len(z.infolist())!=1 or z.testzip() is not None:raise ValueError('Bad v3 ZIP')
+        _,meta3,first3,second3=inspect_container(z.read(z.namelist()[0]))
+    expected3,growth=repack(newsecond,json.loads(PLAN_PATH.read_text()))
+    if (meta3,first3,second3)!=(newmeta,newfirst,expected3) or growth!=241:
+        raise ValueError('US v3 differs from its exact CROM block plan')
+    if hashlib.sha256(first3).hexdigest()!=report['part1_sha256'] or hashlib.sha256(second3).hexdigest()!=report['modified_part2_sha256']:
+        raise ValueError('US v3 IPL hash mismatch')
+    if validation['status']!='passed' or len(validation['native_decoder_segments'])!=3 or validation['decoded_changed_addresses']!=[hex(0x41a4573c+i) for i in range(4)] or len(validation['cleaning_comparisons'])!=36:
+        raise ValueError('Missing v3 native decode/cleaning validation')
+    print(f'{filename}: integrity, unchanged v2 first IPL, exact CROM plan and native cleaning comparisons OK; physical cleaning UNTESTED')
 
 
 if __name__ == '__main__':

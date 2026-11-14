@@ -1,0 +1,571 @@
+{
+  "status": "passed",
+  "revision": 3,
+  "package_sha256": "e9937d5c82d38a09ac063a468a6d580d65d60f46170a16eeb5feab0df8238acc",
+  "native_decoder_segments": [
+    {
+      "destination": "0x41a0d000",
+      "length": 2436364,
+      "sha256": "9af18785b5c0486e6cc660ed00fc489087883107b1219478f1bf6dec7d4ac8da",
+      "cursor": 1287761
+    },
+    {
+      "destination": "0x40000000",
+      "length": 767300,
+      "sha256": "955e434a779e4c2fa516c226af004419602fb7d4f0395043582377dbba88f3c3",
+      "cursor": 1569931
+    },
+    {
+      "destination": "0x43e51000",
+      "length": 2972,
+      "sha256": "a2042e7cee0c55e984fe003f16cddf0296971878d263e7e40ca4d31eade8a1e5",
+      "cursor": 1572092
+    }
+  ],
+  "decoded_changed_addresses": [
+    "0x41a4573c",
+    "0x41a4573d",
+    "0x41a4573e",
+    "0x41a4573f"
+  ],
+  "other_decoded_segments_unchanged": true,
+  "global_dummy_recognition_retained": true,
+  "cleaning_comparisons": [
+    {
+      "version": "v2",
+      "entry": "normal-cleaning",
+      "mode": 1,
+      "dispatch_result": 0,
+      "returned": 0,
+      "events": []
+    },
+    {
+      "version": "v2",
+      "entry": "command-9-handler",
+      "mode": 1,
+      "dispatch_result": 0,
+      "events": [
+        [
+          "reply",
+          0
+        ]
+      ]
+    },
+    {
+      "version": "v2",
+      "entry": "normal-cleaning",
+      "mode": 1,
+      "dispatch_result": 1,
+      "returned": 0,
+      "events": []
+    },
+    {
+      "version": "v2",
+      "entry": "command-9-handler",
+      "mode": 1,
+      "dispatch_result": 1,
+      "events": [
+        [
+          "reply",
+          0
+        ]
+      ]
+    },
+    {
+      "version": "v2",
+      "entry": "normal-cleaning",
+      "mode": 1,
+      "dispatch_result": 85,
+      "returned": 0,
+      "events": []
+    },
+    {
+      "version": "v2",
+      "entry": "command-9-handler",
+      "mode": 1,
+      "dispatch_result": 85,
+      "events": [
+        [
+          "reply",
+          0
+        ]
+      ]
+    },
+    {
+      "version": "v2",
+      "entry": "normal-cleaning",
+      "mode": 2,
+      "dispatch_result": 0,
+      "returned": 0,
+      "events": []
+    },
+    {
+      "version": "v2",
+      "entry": "command-9-handler",
+      "mode": 2,
+      "dispatch_result": 0,
+      "events": [
+        [
+          "reply",
+          0
+        ]
+      ]
+    },
+    {
+      "version": "v2",
+      "entry": "normal-cleaning",
+      "mode": 2,
+      "dispatch_result": 1,
+      "returned": 0,
+      "events": []
+    },
+    {
+      "version": "v2",
+      "entry": "command-9-handler",
+      "mode": 2,
+      "dispatch_result": 1,
+      "events": [
+        [
+          "reply",
+          0
+        ]
+      ]
+    },
+    {
+      "version": "v2",
+      "entry": "normal-cleaning",
+      "mode": 2,
+      "dispatch_result": 85,
+      "returned": 0,
+      "events": []
+    },
+    {
+      "version": "v2",
+      "entry": "command-9-handler",
+      "mode": 2,
+      "dispatch_result": 85,
+      "events": [
+        [
+          "reply",
+          0
+        ]
+      ]
+    },
+    {
+      "version": "v2",
+      "entry": "normal-cleaning",
+      "mode": 3,
+      "dispatch_result": 0,
+      "returned": 0,
+      "events": []
+    },
+    {
+      "version": "v2",
+      "entry": "command-9-handler",
+      "mode": 3,
+      "dispatch_result": 0,
+      "events": [
+        [
+          "reply",
+          0
+        ]
+      ]
+    },
+    {
+      "version": "v2",
+      "entry": "normal-cleaning",
+      "mode": 3,
+      "dispatch_result": 1,
+      "returned": 0,
+      "events": []
+    },
+    {
+      "version": "v2",
+      "entry": "command-9-handler",
+      "mode": 3,
+      "dispatch_result": 1,
+      "events": [
+        [
+          "reply",
+          0
+        ]
+      ]
+    },
+    {
+      "version": "v2",
+      "entry": "normal-cleaning",
+      "mode": 3,
+      "dispatch_result": 85,
+      "returned": 0,
+      "events": []
+    },
+    {
+      "version": "v2",
+      "entry": "command-9-handler",
+      "mode": 3,
+      "dispatch_result": 85,
+      "events": [
+        [
+          "reply",
+          0
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "normal-cleaning",
+      "mode": 1,
+      "dispatch_result": 0,
+      "returned": 0,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          1
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "command-9-handler",
+      "mode": 1,
+      "dispatch_result": 0,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          1
+        ],
+        [
+          "reply",
+          0
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "normal-cleaning",
+      "mode": 1,
+      "dispatch_result": 1,
+      "returned": 1,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          1
+        ],
+        [
+          "cleanup"
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "command-9-handler",
+      "mode": 1,
+      "dispatch_result": 1,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          1
+        ],
+        [
+          "cleanup"
+        ],
+        [
+          "reply",
+          1
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "normal-cleaning",
+      "mode": 1,
+      "dispatch_result": 85,
+      "returned": 85,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          1
+        ],
+        [
+          "cleanup"
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "command-9-handler",
+      "mode": 1,
+      "dispatch_result": 85,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          1
+        ],
+        [
+          "cleanup"
+        ],
+        [
+          "reply",
+          1
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "normal-cleaning",
+      "mode": 2,
+      "dispatch_result": 0,
+      "returned": 0,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          2
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "command-9-handler",
+      "mode": 2,
+      "dispatch_result": 0,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          2
+        ],
+        [
+          "reply",
+          0
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "normal-cleaning",
+      "mode": 2,
+      "dispatch_result": 1,
+      "returned": 1,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          2
+        ],
+        [
+          "cleanup"
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "command-9-handler",
+      "mode": 2,
+      "dispatch_result": 1,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          2
+        ],
+        [
+          "cleanup"
+        ],
+        [
+          "reply",
+          1
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "normal-cleaning",
+      "mode": 2,
+      "dispatch_result": 85,
+      "returned": 85,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          2
+        ],
+        [
+          "cleanup"
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "command-9-handler",
+      "mode": 2,
+      "dispatch_result": 85,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          2
+        ],
+        [
+          "cleanup"
+        ],
+        [
+          "reply",
+          1
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "normal-cleaning",
+      "mode": 3,
+      "dispatch_result": 0,
+      "returned": 0,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          3
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "command-9-handler",
+      "mode": 3,
+      "dispatch_result": 0,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          3
+        ],
+        [
+          "reply",
+          0
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "normal-cleaning",
+      "mode": 3,
+      "dispatch_result": 1,
+      "returned": 1,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          3
+        ],
+        [
+          "cleanup"
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "command-9-handler",
+      "mode": 3,
+      "dispatch_result": 1,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          3
+        ],
+        [
+          "cleanup"
+        ],
+        [
+          "reply",
+          1
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "normal-cleaning",
+      "mode": 3,
+      "dispatch_result": 85,
+      "returned": 85,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          3
+        ],
+        [
+          "cleanup"
+        ]
+      ]
+    },
+    {
+      "version": "v3",
+      "entry": "command-9-handler",
+      "mode": 3,
+      "dispatch_result": 85,
+      "events": [
+        [
+          "mode-selector"
+        ],
+        [
+          "hardware-dispatch",
+          3
+        ],
+        [
+          "cleanup"
+        ],
+        [
+          "reply",
+          1
+        ]
+      ]
+    }
+  ],
+  "existing_early_guards_preserved": true,
+  "abi_preserved": true,
+  "device_tested": false,
+  "physical_cleaning_verified": false,
+  "scope": "Native CROM decoder without mocks. Cleaning routine and command-9 handler execute native code; mode selector, hardware dispatcher, cleanup and ready/idle/reply boundaries are mocked. No physical motor/pump emulation."
+}
