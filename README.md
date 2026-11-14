@@ -14,6 +14,8 @@ v2에서 패널 헤드 청소가 즉시 완료되는 사용자 보고에 대한 
 압축 해제 후 명령어 한 곳만 바뀌며, 일반 청소의 모드 선택·실행 요청 경로 비교 검증을 통과했습니다.
 **실제 청소 동작은 아직 확인되지 않았습니다.**
 
+CR 모터 발열 감속 제어는 [별도로 분석 중](docs/cr-heat-investigation.md)이며, 이를 비활성화한 파일은 아직 없습니다.
+
 [미국판 v2 다운로드](https://raw.githubusercontent.com/ZanghyunCho/TX720/main/firmware/FWC365TL_US_chipless_candidate_v2_EXPERIMENTAL.efu) · [변경 및 검증 범위](docs/us-chipless-candidate-v2.md)
 
 v1에서 남았던 장착·잉크 종료 상태 전달 경로를 추가로 수정한 후보입니다.
