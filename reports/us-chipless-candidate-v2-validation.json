@@ -1,0 +1,518 @@
+{
+  "status": "passed",
+  "revision": 2,
+  "package_sha256": "1eb06886cea92cae6ee4249fe258c1195ab1874b6e3740176e3288e9a8c81355",
+  "gui_level_getter_cases": 1536,
+  "original_rom_crom_external_direct_references_to_reused_tail": [],
+  "normalized_api_cases": 4096,
+  "unmodified_message_cases": 108,
+  "native_error_decision_cases": [
+    {
+      "slot": 0,
+      "input_code": 2,
+      "before": [
+        {
+          "21": 1
+        },
+        {
+          "0x100": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 0,
+      "input_code": 3,
+      "before": [
+        {
+          "22": 1
+        },
+        {
+          "0x40": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 0,
+      "input_code": 4,
+      "before": [
+        {
+          "22": 1
+        },
+        {
+          "0x40": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 0,
+      "input_code": 5,
+      "before": [
+        {
+          "23": 1
+        },
+        {
+          "0x80": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 0,
+      "input": "end-status-3",
+      "before": [
+        {
+          "20": 1
+        },
+        {
+          "0x20": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 1,
+      "input_code": 2,
+      "before": [
+        {
+          "21": 1
+        },
+        {
+          "0x100": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 1,
+      "input_code": 3,
+      "before": [
+        {
+          "22": 1
+        },
+        {
+          "0x40": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 1,
+      "input_code": 4,
+      "before": [
+        {
+          "22": 1
+        },
+        {
+          "0x40": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 1,
+      "input_code": 5,
+      "before": [
+        {
+          "23": 1
+        },
+        {
+          "0x80": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 1,
+      "input": "end-status-3",
+      "before": [
+        {
+          "20": 1
+        },
+        {
+          "0x20": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 2,
+      "input_code": 2,
+      "before": [
+        {
+          "21": 1
+        },
+        {
+          "0x100": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 2,
+      "input_code": 3,
+      "before": [
+        {
+          "22": 1
+        },
+        {
+          "0x40": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 2,
+      "input_code": 4,
+      "before": [
+        {
+          "22": 1
+        },
+        {
+          "0x40": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 2,
+      "input_code": 5,
+      "before": [
+        {
+          "23": 1
+        },
+        {
+          "0x80": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 2,
+      "input": "end-status-3",
+      "before": [
+        {
+          "20": 1
+        },
+        {
+          "0x20": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 3,
+      "input_code": 2,
+      "before": [
+        {
+          "21": 1
+        },
+        {
+          "0x100": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 3,
+      "input_code": 3,
+      "before": [
+        {
+          "22": 1
+        },
+        {
+          "0x40": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 3,
+      "input_code": 4,
+      "before": [
+        {
+          "22": 1
+        },
+        {
+          "0x40": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 3,
+      "input_code": 5,
+      "before": [
+        {
+          "23": 1
+        },
+        {
+          "0x80": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 3,
+      "input": "end-status-3",
+      "before": [
+        {
+          "20": 1
+        },
+        {
+          "0x20": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 4,
+      "input_code": 2,
+      "before": [
+        {
+          "21": 1
+        },
+        {
+          "0x100": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 4,
+      "input_code": 3,
+      "before": [
+        {
+          "22": 1
+        },
+        {
+          "0x40": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 4,
+      "input_code": 4,
+      "before": [
+        {
+          "22": 1
+        },
+        {
+          "0x40": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 4,
+      "input_code": 5,
+      "before": [
+        {
+          "23": 1
+        },
+        {
+          "0x80": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 4,
+      "input": "end-status-3",
+      "before": [
+        {
+          "20": 1
+        },
+        {
+          "0x20": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 5,
+      "input_code": 2,
+      "before": [
+        {
+          "21": 1
+        },
+        {
+          "0x100": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 5,
+      "input_code": 3,
+      "before": [
+        {
+          "22": 1
+        },
+        {
+          "0x40": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 5,
+      "input_code": 4,
+      "before": [
+        {
+          "22": 1
+        },
+        {
+          "0x40": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 5,
+      "input_code": 5,
+      "before": [
+        {
+          "23": 1
+        },
+        {
+          "0x80": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    },
+    {
+      "slot": 5,
+      "input": "end-status-3",
+      "before": [
+        {
+          "20": 1
+        },
+        {
+          "0x20": 1
+        }
+      ],
+      "after": [
+        {},
+        {}
+      ]
+    }
+  ],
+  "unrelated_error_preserved": [
+    {
+      "16": 1
+    },
+    {
+      "0x8": 1
+    }
+  ],
+  "abi_and_readonly_caller_data_checked": true,
+  "mocks": [
+    "0x3742f4",
+    "0x374304",
+    "0x37430c",
+    "0x41ad34bc",
+    "0x41ad433c",
+    "0x41ad2fcc",
+    "0x41ad33cc",
+    "0x41ad31a8",
+    "0x41ad2d34",
+    "0x167a8",
+    "0x17eb0c",
+    "0x65a78",
+    "0x659b8"
+  ],
+  "scope": "Actual wrapper, original API serializer/copy, original status stores and ink error decisions. Kernel, flag sinks and final notifications mocked. No full device emulation.",
+  "device_tested": false,
+  "printing_verified": false
+}

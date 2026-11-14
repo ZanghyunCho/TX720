@@ -33,8 +33,51 @@ WORDS = [
 ]
 READER = struct.pack('<'+'I'*len(WORDS), *WORDS)
 
+# Reuse the now-unreachable tail of the replaced reader, keeping execution in
+# its original executable ROM region. No new padding region or RAM patching.
+FILTER_ADDRESS = READ_ADDRESS + len(READER)
+STATUS_API = 0x11cb5c
+LEVEL_GETTER = 0x1fd8a8
+FULL_LEVEL = bytes.fromhex('6400a0e31eff2fe1')  # mov r0,#100; bx lr
 
-def build(source, output, report_path):
+
+def arm_branch(address, target, link=False, condition=14):
+    displacement=target-address-8
+    if displacement%4 or not -(1<<25)<=displacement<(1<<25):
+        raise ValueError('ARM branch out of range')
+    return condition<<28 | (0x0b000000 if link else 0x0a000000) | ((displacement//4)&0xffffff)
+
+
+def status_filter():
+    """Wrap the real queued status API; use stack copies, never alter caller data."""
+    words=[];labels={};fixups=[]
+    def emit(w):words.append(w)
+    def label(name):labels[name]=FILTER_ADDRESS+len(words)*4
+    def jump(name,cond=14,link=False):
+        fixups.append((len(words),name,cond,link));emit(0)
+    emit(0xe92d40f0);emit(0xe24dd00c)  # save r4-r7/lr; 12-byte scratch, aligned call
+    emit(0xe3500015);emit(0x03a07064);jump('six',0)
+    emit(0xe3500016);emit(0x03a07001);jump('six',0)
+    emit(0xe2403c02);emit(0xe2433011);emit(0xe3530005);jump('original',8)
+    emit(0xe3520001);jump('original',1)
+    emit(0xe3a07001);emit(0xe5cd7000);emit(0xe1a0100d);jump('original')
+    label('six');emit(0xe3520006);jump('original',1);emit(0xe3a03000)
+    label('loop');emit(0xe7cd7003);emit(0xe2833001);emit(0xe3530006);jump('loop',3)
+    emit(0xe1a0100d)
+    label('original');jump('trampoline',link=True)
+    emit(0xe28dd00c);emit(0xe8bd80f0)
+    label('trampoline');emit(0xe92d40f0)
+    emit(arm_branch(FILTER_ADDRESS+len(words)*4,STATUS_API+4))
+    for i,name,cond,link in fixups:
+        words[i]=arm_branch(FILTER_ADDRESS+i*4,labels[name],link,cond)
+    return struct.pack('<'+'I'*len(words),*words)
+
+
+STATUS_FILTER=status_filter()
+
+
+def build(source, output, report_path, revision=1):
+    if revision not in [1,2]:raise ValueError('Unknown revision')
     if output.exists() or report_path.exists():
         raise ValueError('Refusing to overwrite existing outputs')
     if sha256(source.read_bytes()) != SOURCE:
@@ -50,7 +93,18 @@ def build(source, output, report_path):
         raise ValueError('Original IPL mismatch')
     changed=bytearray(original)
     edits=[]
-    for off,after in [(o,AFTER) for o in profile['offsets']]+[(READ_OFFSET,READER)]:
+    patches=[(o,AFTER) for o in profile['offsets']]+[(READ_OFFSET,READER)]
+    if revision==2:
+        cave=FILTER_ADDRESS-0xd000
+        if FILTER_ADDRESS+len(STATUS_FILTER)>0x48a48:
+            raise ValueError('Filter does not fit inside the replaced reader tail')
+        if original[STATUS_API-0xd000:STATUS_API-0xd000+4]!=bytes.fromhex('f0402de9'):
+            raise ValueError('Unexpected status API prologue')
+        if original[LEVEL_GETTER-0xd000:LEVEL_GETTER-0xd000+8]!=bytes.fromhex('24129fe50000d1e7'):
+            raise ValueError('Unexpected level cache getter')
+        patches += [(cave,STATUS_FILTER),(STATUS_API-0xd000,struct.pack('<I',arm_branch(STATUS_API,FILTER_ADDRESS))),
+                    (LEVEL_GETTER-0xd000,FULL_LEVEL)]
+    for off,after in patches:
         before=original[off:off+len(after)]
         if off in profile['offsets'] and before!=BEFORE:
             raise ValueError('Unexpected scanner instruction')
@@ -81,6 +135,13 @@ def build(source, output, report_path):
                 metadata_unchanged=True,part2_unchanged=True,
                 purpose='Synthetic dummy-cartridge read records; stock recognition and stock full-level branch; scanner closed retained.',
                 limitations='Boot, physical chip absence, printing, ink-level display and recovery have NOT been tested on a printer.')
+    if revision==2:
+        report.update(revision=2,status_filter_address=hex(FILTER_ADDRESS),
+                      filter_storage='Unreachable tail of replaced 0x48974 reader; ends before next function 0x48a48.',
+                      normalized_messages={'0x15/length6':'all 100','0x16/length6':'all 1',
+                                           '0x211..0x216/length1':'1'},
+                      level_getter_fixed_100=hex(LEVEL_GETTER),
+                      purpose='v1 synthetic chip reader plus normalization of six-channel level, end and installation status messages and full-level GUI getter; scanner closed retained.')
     report_path.parent.mkdir(parents=True,exist_ok=True)
     report_path.write_text(json.dumps(report,indent=2)+'\n')
     return report
@@ -90,5 +151,6 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('source',type=Path);p.add_argument('output',type=Path)
     p.add_argument('--manifest',required=True,type=Path)
+    p.add_argument('--revision',type=int,choices=[1,2],default=1)
     a=p.parse_args()
-    print(json.dumps(build(a.source,a.output,a.manifest),indent=2))
+    print(json.dumps(build(a.source,a.output,a.manifest,a.revision),indent=2))

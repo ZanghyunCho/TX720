@@ -6,7 +6,9 @@ from pathlib import Path
 import zipfile
 
 from patch_scanner_closed import AFTER, PROFILES, inspect_container
-from patch_us_chipless_candidate import READ_OFFSET, READER
+from patch_us_chipless_candidate import (READ_OFFSET, READER, STATUS_API,
+    FILTER_ADDRESS, STATUS_FILTER, LEVEL_GETTER, FULL_LEVEL, arm_branch)
+import struct
 
 
 def main():
@@ -59,6 +61,32 @@ def main():
     if validation['status']!='passed' or validation['synthetic_reader_cases']!=3072 or validation['stock_acceptance_cases']!=1536 or validation['stock_packet_mode_cases']!=256:
         raise ValueError('Missing candidate native validation')
     print(f'{filename}: package integrity, exact edits, stock-function execution report OK; device UNTESTED')
+    baseline=first
+    filename='FWC365TL_US_chipless_candidate_v2_EXPERIMENTAL.efu'
+    file=root/'firmware'/filename
+    report=json.loads((root/'reports/us-chipless-candidate-v2-patch.json').read_text())
+    validation=json.loads((root/'reports/us-chipless-candidate-v2-validation.json').read_text())
+    reader=json.loads((root/'reports/us-chipless-candidate-v2-reader-validation.json').read_text())
+    package_hash=hashlib.sha256(file.read_bytes()).hexdigest()
+    if any(package_hash!=r[k] for r,k in [(report,'output_efu_sha256'),(validation,'package_sha256'),(reader,'package_sha256')]):
+        raise ValueError('US v2 package/report hash mismatch')
+    with zipfile.ZipFile(file) as z:
+        if len(z.infolist())!=1 or z.testzip() is not None:raise ValueError('Bad v2 ZIP')
+        _,newmeta,newfirst,newsecond=inspect_container(z.read(z.namelist()[0]))
+    allowed={0x22,0x23}|set(range(0x40,0x54))
+    for address,code in [(FILTER_ADDRESS,STATUS_FILTER),(STATUS_API,struct.pack('<I',arm_branch(STATUS_API,FILTER_ADDRESS))),
+                         (LEVEL_GETTER,FULL_LEVEL)]:
+        off=address-0xd000
+        allowed.update(range(off,off+len(code)))
+        if newfirst[off:off+len(code)]!=code:raise ValueError('v2 code mismatch')
+    differences={i for i,(a,b) in enumerate(zip(newfirst,baseline)) if a!=b}
+    if newmeta!=metadata or newsecond!=second or len(newfirst)!=len(baseline) or not differences<=allowed:
+        raise ValueError('v2 modified unexpected bytes')
+    if hashlib.sha256(newfirst).hexdigest()!=report['patched_part1_sha256']:
+        raise ValueError('v2 IPL hash mismatch')
+    if validation['status']!='passed' or validation['normalized_api_cases']!=4096 or validation['gui_level_getter_cases']!=1536 or len(validation['native_error_decision_cases'])!=30 or reader['status']!='passed':
+        raise ValueError('Missing v2 native validation')
+    print(f'{filename}: integrity, exact edits, status API and native error comparisons OK; device UNTESTED')
 
 
 if __name__ == '__main__':

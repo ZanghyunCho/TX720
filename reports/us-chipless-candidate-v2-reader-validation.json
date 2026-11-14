@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "variant": "US",
+  "package_sha256": "1eb06886cea92cae6ee4249fe258c1195ab1874b6e3740176e3288e9a8c81355",
+  "synthetic_reader_cases": 3072,
+  "negative_controls": 18,
+  "stock_acceptance_masks": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "stock_packet_hex": "806401806401806401806401806401806401",
+  "stock_read_dispatch_cases": 64,
+  "stock_acceptance_cases": 1536,
+  "stock_packet_mode_cases": 256,
+  "stock_reported_percentages": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "stock_channel_status": [
+    128,
+    128,
+    128,
+    128,
+    128,
+    128
+  ],
+  "stock_all_dummy_recognizer": true,
+  "abi_and_write_boundaries_checked": true,
+  "mocks": [
+    "scheduler entry and hardware bus-idle exit for stock read dispatcher",
+    "RTOS property get/set: in-memory, absent keys zero",
+    "event queue sender: records arguments",
+    "message allocation/sending: fixed test buffer"
+  ],
+  "device_tested": false,
+  "physical_printing_verified": false
+}
