@@ -1,0 +1,579 @@
+{
+  "variant": "US",
+  "status": "passed",
+  "firmware_modified": false,
+  "input_sha256": {
+    "part1.ipl": "6fa67ff99fba51882772fa15164800129c70f9fa2518e3a869e1f367b45f81d4",
+    "crom-extracted/41a0d000.bin": "a5111316243e44acb55395dc99766b679ccb572d29990d8ac10de3dc2e66c275",
+    "crom-extracted/40000000.bin": "955e434a779e4c2fa516c226af004419602fb7d4f0395043582377dbba88f3c3",
+    "crom-extracted/43e51000.bin": "a2042e7cee0c55e984fe003f16cddf0296971878d263e7e40ca4d31eade8a1e5"
+  },
+  "profiles": {
+    "aggregate": "0x41ac0afc",
+    "state": "0x4017ad54",
+    "converter": "0x41abfa84",
+    "percentage_getter": "0x1fd8a8",
+    "percentage_cache": "0x400d5dbf",
+    "csic_predicate": "0x1815e0",
+    "property_get": "0x65a78",
+    "packet_parser": "0x41ac2a04"
+  },
+  "cases": [
+    {
+      "case": "normal",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        0
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-2-slot-0",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-2-slot-1",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-2-slot-2",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-2-slot-3",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-2-slot-4",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-2-slot-5",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-3-slot-0",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-3-slot-1",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-3-slot-2",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-3-slot-3",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-3-slot-4",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-3-slot-5",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-4-slot-0",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 0
+    },
+    {
+      "case": "chip-state-4-slot-1",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 0
+    },
+    {
+      "case": "chip-state-4-slot-2",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 0
+    },
+    {
+      "case": "chip-state-4-slot-3",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 0
+    },
+    {
+      "case": "chip-state-4-slot-4",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 0
+    },
+    {
+      "case": "chip-state-4-slot-5",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 0
+    },
+    {
+      "case": "chip-state-5-slot-0",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-5-slot-1",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-5-slot-2",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-5-slot-3",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-5-slot-4",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "chip-state-5-slot-5",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "end-status-0x85-slot-0",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "end-status-0x85-slot-1",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "end-status-0x85-slot-2",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "end-status-0x85-slot-3",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "end-status-0x85-slot-4",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    },
+    {
+      "case": "end-status-0x85-slot-5",
+      "reported_percentages": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "native_error_event": [
+        136,
+        0,
+        1
+      ],
+      "csic_service_predicate": 1
+    }
+  ],
+  "conversion_checks": [
+    {
+      "slot": 0,
+      "input_codes_checked": 256
+    },
+    {
+      "slot": 1,
+      "input_codes_checked": 256
+    },
+    {
+      "slot": 2,
+      "input_codes_checked": 256
+    },
+    {
+      "slot": 3,
+      "input_codes_checked": 256
+    },
+    {
+      "slot": 4,
+      "input_codes_checked": 256
+    },
+    {
+      "slot": 5,
+      "input_codes_checked": 256
+    }
+  ],
+  "counterexamples": 30,
+  "finding": "All-six 100% reported levels do not clear independent chip-state or 0x85 end-status errors.",
+  "scope": "Original ARM functions with simulated RAM; property service and final event sink stubbed; no chip bus or printing emulation."
+}
