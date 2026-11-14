@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "decoded_size": 8945996,
+  "sha256": "418df34d081aab1eca5f266db9283dc9cd87672a4ee50175a0a6dbc9ccb49bd3",
+  "software_output_equals_native_lz": true,
+  "token_count": 724236,
+  "scope": "Canonical Huffman decoded in software. Original donor ARM LZ copy loop and copy routine executed in Unicorn; token-ready polling stubbed because the token buffer is predecoded. Hardware Huffman accelerator, printer and LUT semantics are not emulated."
+}
