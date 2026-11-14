@@ -1,0 +1,62 @@
+{
+  "variant": "JP",
+  "version": "22.22.AJ06I7.FY10",
+  "target": "AJ*FY10",
+  "source_efu_sha256": "4bdcd6236ff9984422acbeb34367c54f3907b6efc9f6593683c38348ac042d62",
+  "patched_efu_sha256": "c9bde532e2fa68b4184248f89c10cd95b5e738e4af371f58ef022c8d7987eb78",
+  "original_part1_sha256": "5989e32cea8ca1102f93b29794bc9850ef48b2d2b19cf175ad965af22aa78447",
+  "patched_part1_sha256": "c2a8f84b0e6bf94058a2b0d0901764588d89b2d15c176fab070030796dcc5ab7",
+  "instructions": [
+    {
+      "ipl_file_offset": "0xdd824",
+      "runtime_address": "0xea824",
+      "before": "a00fa0e1",
+      "after": "0000a0e3"
+    },
+    {
+      "ipl_file_offset": "0xdd840",
+      "runtime_address": "0xea840",
+      "before": "a00fa0e1",
+      "after": "0000a0e3"
+    }
+  ],
+  "changed_byte_offsets": [
+    "0x22",
+    "0x23",
+    "0x40",
+    "0x41",
+    "0x42",
+    "0x43",
+    "0x44",
+    "0x45",
+    "0x46",
+    "0x47",
+    "0x48",
+    "0x49",
+    "0x4a",
+    "0x4b",
+    "0x4c",
+    "0x4d",
+    "0x4e",
+    "0x4f",
+    "0x50",
+    "0x51",
+    "0x52",
+    "0x53",
+    "0xdd824",
+    "0xdd825",
+    "0xdd827",
+    "0xdd840",
+    "0xdd841",
+    "0xdd843"
+  ],
+  "old_byte_sum": "0x748f",
+  "new_byte_sum": "0x7335",
+  "old_sha1_field": "c10aaa91ef409220cf7f97210e4261094a96aa81",
+  "new_sha1_field": "cf3df1b38715bca1a2027787a275ff3d7b6f90ac",
+  "integrity_checks": "ZIP CRC, helper byte-sum, payload byte-sum, salted SHA-1 passed",
+  "part2_unchanged": true,
+  "metadata_unchanged": true,
+  "language_resources_unchanged": true,
+  "device_tested": false
+}

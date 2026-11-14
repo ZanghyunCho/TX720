@@ -1,0 +1,23 @@
+[
+  {
+    "destination": "0x41a0d000",
+    "size": 2436364,
+    "stream_cursor": 1287520,
+    "sha256": "a5111316243e44acb55395dc99766b679ccb572d29990d8ac10de3dc2e66c275",
+    "file": "41a0d000.bin"
+  },
+  {
+    "destination": "0x40000000",
+    "size": 767300,
+    "stream_cursor": 1569690,
+    "sha256": "955e434a779e4c2fa516c226af004419602fb7d4f0395043582377dbba88f3c3",
+    "file": "40000000.bin"
+  },
+  {
+    "destination": "0x43e51000",
+    "size": 2972,
+    "stream_cursor": 1571851,
+    "sha256": "a2042e7cee0c55e984fe003f16cddf0296971878d263e7e40ca4d31eade8a1e5",
+    "file": "43e51000.bin"
+  }
+]

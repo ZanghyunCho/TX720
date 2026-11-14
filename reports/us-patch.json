@@ -1,0 +1,62 @@
+{
+  "variant": "US",
+  "version": "21.21.AW03G6.FY10",
+  "target": "AW*FY10",
+  "source_efu_sha256": "f78f7554db98e1b108bcbd28d1781389ae507bb7f1967ba08cee6792965948a4",
+  "patched_efu_sha256": "f9d64163d36e6873dc89c8f2904d2240d033002531ff03b43f34717f99ea00a0",
+  "original_part1_sha256": "6fa67ff99fba51882772fa15164800129c70f9fa2518e3a869e1f367b45f81d4",
+  "patched_part1_sha256": "63793645b0aed2119023e8fb33db8a4227832f9f543ff6caf63729eaf54a54fa",
+  "instructions": [
+    {
+      "ipl_file_offset": "0x11be2c",
+      "runtime_address": "0x128e2c",
+      "before": "a00fa0e1",
+      "after": "0000a0e3"
+    },
+    {
+      "ipl_file_offset": "0x11be48",
+      "runtime_address": "0x128e48",
+      "before": "a00fa0e1",
+      "after": "0000a0e3"
+    }
+  ],
+  "changed_byte_offsets": [
+    "0x22",
+    "0x23",
+    "0x40",
+    "0x41",
+    "0x42",
+    "0x43",
+    "0x44",
+    "0x45",
+    "0x46",
+    "0x47",
+    "0x48",
+    "0x49",
+    "0x4a",
+    "0x4b",
+    "0x4c",
+    "0x4d",
+    "0x4e",
+    "0x4f",
+    "0x50",
+    "0x51",
+    "0x52",
+    "0x53",
+    "0x11be2c",
+    "0x11be2d",
+    "0x11be2f",
+    "0x11be48",
+    "0x11be49",
+    "0x11be4b"
+  ],
+  "old_byte_sum": "0x84d2",
+  "new_byte_sum": "0x8378",
+  "old_sha1_field": "bfd7d3288be5cca0c3006367f577a7469232342e",
+  "new_sha1_field": "be17c370de91354786f3737c446ad593022fcf56",
+  "integrity_checks": "ZIP CRC, helper byte-sum, payload byte-sum, salted SHA-1 passed",
+  "part2_unchanged": true,
+  "metadata_unchanged": true,
+  "language_resources_unchanged": true,
+  "device_tested": false
+}

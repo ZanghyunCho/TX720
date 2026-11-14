@@ -1,0 +1,31 @@
+{
+  "variant": "JP",
+  "status": "passed",
+  "function_invocations": 15360,
+  "port_values": 256,
+  "override_flag_values": [
+    0,
+    1,
+    2,
+    255
+  ],
+  "paths": {
+    "original:0xea808": 1024,
+    "original:0xea834": 1024,
+    "original:0x41aedd04": 1024,
+    "original:0x2911c8": 1024,
+    "original:0x41a44458": 1024,
+    "original:0x41b59f88": 1024,
+    "original:0xe3088": 1024,
+    "patched:0xea808": 1024,
+    "patched:0xea834": 1024,
+    "patched:0x41aedd04": 1024,
+    "patched:0x2911c8": 1024,
+    "patched:0x41a44458": 1024,
+    "patched:0x41b59f88": 1024,
+    "patched:0xe3088": 1024
+  },
+  "callee_saved_registers_and_stack": "preserved",
+  "unrelated_photo_tray_and_duplex_readers": "unchanged",
+  "scope": "native ARM execution with simulated MMIO; not whole-device validation"
+}
